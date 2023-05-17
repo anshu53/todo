@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="" id="inputfield" />
+    <button type="submit" id="adddo">Submit</button>
+    <p id="todo"></p>
+  </body>
+  <script>
+    let addbtn = document.getElementById("adddo");
+    let todo = document.getElementById("todo");
+    let inputfield = document.getElementById("inputfield");
+
+    addbtn.addEventListener("click", function () {
+      var div = document.createElement("li");
+      div.innerText = inputfield.value;
+      todo.appendChild(div);
+      inputfield.value = "";
+    });
+  </script>
+</html>
